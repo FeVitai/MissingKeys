@@ -16,15 +16,19 @@ public class Check {
 
 		List<String> ptList = new ArrayList<String>();
 		List<String> esList = new ArrayList<String>();
-		
+
 		while ((ptString = pt.readLine()) != null) {
-			ptList.add(ptString);
+			if (ptString.length() > 0) {
+				ptList.add(ptString.trim());
+			}
 		}
 
 		while ((esString = es.readLine()) != null) {
-			esList.add(esString);
+			if (esString.length() > 0) {
+				esList.add(esString.trim());
+			}
 		}
-		
+
 		System.out.println("Pt List: " + ptList);
 		System.out.println("Es List: " + esList);
 
